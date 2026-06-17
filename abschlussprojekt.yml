@@ -18,7 +18,7 @@
           
     - name: ⏳ Initialisierung
       pause:
-        seconds: 8
+        seconds: 2
 
 
     - name: 🔌 Verbindungstest
@@ -30,7 +30,7 @@
 
     - name: Warten
       pause:
-        seconds: 6
+        seconds: 2
 
 
     - name: 📂 Präsentationsdateien prüfen
@@ -43,7 +43,7 @@
 
     - name: Folien laden
       pause:
-        seconds: 10
+        seconds: 2
 
 
     - name: 🎤 Sprecher-Modul aktivieren
@@ -57,7 +57,7 @@
 
     - name: Nervosität behandeln
       pause:
-        seconds: 5
+        seconds: 4
 
 
     - name: ☕ Notfallprüfung
@@ -82,55 +82,14 @@
 
     - name: Abschlussprüfung
       pause:
-        seconds: 10
-
+        seconds: 4
 
     - name: 🚦 Startfreigabe
       debug:
         msg:
-          - ""
           - "=========================================="
           - "🚦 STARTFREIGABE ERTEILT"
           - "=========================================="
-          - ""
-          - "Präsentation startet in..."
-
-
-    - name: Countdown 5
-      debug:
-        msg: "5..."
-
-    - pause:
-        seconds: 1
-
-    - name: Countdown 4
-      debug:
-        msg: "4..."
-
-    - pause:
-        seconds: 1
-
-    - name: Countdown 3
-      debug:
-        msg: "3..."
-
-    - pause:
-        seconds: 1
-
-    - name: Countdown 2
-      debug:
-        msg: "2..."
-
-    - pause:
-        seconds: 1
-
-    - name: Countdown 1
-      debug:
-        msg: "1..."
-
-    - pause:
-        seconds: 2
-
 
     - name: 🎓 Präsentation gestartet
       debug:
