@@ -1,142 +1,143 @@
 ---
-- name: 🎓 AWX Abschlusspräsentation Automation Show
+- name: 🎓 Präsentationsstart Automatisierung
   hosts: localhost
   connection: local
-  gather_facts: yes
+  gather_facts: false
 
   tasks:
 
-    - name: 🤖 AWX System wird gestartet
+    - name: 🎬 Präsentationssystem initialisieren
       debug:
         msg:
-          - "======================================"
-          - "🤖 AWX AUTOMATION ASSISTENT"
-          - "======================================"
+          - "=========================================="
+          - "🎓 PRESENTATION CONTROL SYSTEM"
+          - "=========================================="
+          - ""
           - "Initialisiere Präsentationsmodus..."
-      
-
-    - name: ⏳ Starte Boot-Sequenz
-      pause:
-        seconds: 5
-
-
-    - name: 🔌 Verbindung wird geprüft
-      debug:
-        msg:
-          - "🔌 Prüfe Verbindung..."
-          - "✅ Kubernetes erreichbar"
-          - "✅ AWX Operator aktiv"
-          - "✅ Ansible Engine bereit"
-
-    - name: ⏳ Verbindungstest läuft
+          - "Bitte warten..."
+          
+    - name: ⏳ Initialisierung
       pause:
         seconds: 8
 
 
-    - name: ☕ Kaffee-Modul laden
+    - name: 🔌 Verbindungstest
       debug:
         msg:
-          - "☕ Lade Motivation..."
-          - "☕ Prüfe Kaffeestatus..."
+          - "🔌 Prüfe Verbindungen..."
+          - "✅ Steuerung verfügbar"
+          - "✅ Präsentationsumgebung erreichbar"
+
+    - name: Warten
+      pause:
+        seconds: 6
+
+
+    - name: 📂 Präsentationsdateien prüfen
+      debug:
+        msg:
+          - "📂 Überprüfe Präsentationsmaterial..."
+          - "✅ Folien geladen"
+          - "✅ Medien verfügbar"
+          - "✅ Demo vorbereitet"
+
+    - name: Folien laden
+      pause:
+        seconds: 10
+
+
+    - name: 🎤 Sprecher-Modul aktivieren
+      debug:
+        msg:
+          - "🎤 Prüfe Präsentationsstatus..."
+          - ""
+          - "🗣️ Stimme erkannt"
+          - "🧠 Wissen geladen"
+          - "😰 Nervosität erkannt"
+
+    - name: Nervosität behandeln
+      pause:
+        seconds: 5
+
+
+    - name: ☕ Notfallprüfung
+      debug:
+        msg:
+          - "☕ Suche nach Kaffee..."
           - "⚠️ Kaffee nicht gefunden"
-          - "➡️ Trotzdem wird fortgesetzt 😄"
+          - "➡️ Präsentation wird trotzdem gestartet"
 
-    - name: Pause für Kaffee
+
+    - name: 🔍 Letzte Kontrolle
+      debug:
+        msg:
+          - "=========================================="
+          - "🔍 FINALER SYSTEMCHECK"
+          - "=========================================="
+          - ""
+          - "✔ Technik"
+          - "✔ Präsentation"
+          - "✔ Sprecher"
+          - "✔ Publikum bereit"
+
+    - name: Abschlussprüfung
       pause:
         seconds: 10
 
 
-    - name: 🧠 Intelligenz-Modul starten
-      debug:
-        msg:
-          - "🧠 Analysiere System..."
-          - "🔍 Suche nach Fehlern..."
-          - "🔍 Suche nach vergessenen Passwörtern..."
-          - "🔍 Suche nach Bugs..."
-
-    - name: Denken...
-      pause:
-        seconds: 12
-
-
-    - name: Ergebnis Analyse
-      debug:
-        msg:
-          - "Analyse abgeschlossen:"
-          - ""
-          - "✅ Keine kritischen Fehler gefunden"
-          - "✅ System läuft stabil"
-          - "⚠️ Bediener benötigt noch Kaffee"
-
-
-    - name: 🖥️ Sammle Systeminformationen
-      debug:
-        msg:
-          - "🖥️ Host: {{ ansible_hostname }}"
-          - "🐧 Betriebssystem: {{ ansible_distribution }}"
-          - "⚙️ CPU Kerne: {{ ansible_processor_vcpus }}"
-          - "📡 Automation Engine: Ansible"
-
-    - name: Systemdaten anzeigen
-      pause:
-        seconds: 10
-
-
-    - name: 🚀 Starte Deployment Simulation
-      debug:
-        msg:
-          - "🚀 Starte automatisiertes Deployment..."
-          - ""
-          - "[          ] 0%"
-          - "[██        ] 25%"
-          - "[████      ] 50%"
-          - "[███████   ] 75%"
-          - "[██████████] 100%"
-
-    - name: Deployment läuft
-      pause:
-        seconds: 15
-
-
-    - name: 🎯 Qualitätsprüfung
-      debug:
-        msg:
-          - "Führe Abschlussprüfung durch..."
-          - "✔ Playbook Syntax"
-          - "✔ Verbindung"
-          - "✔ Automation"
-          - "✔ Kaffeeversorgung"
-
-    - name: Prüfung läuft
-      pause:
-        seconds: 12
-
-
-    - name: 🏆 Erfolgsmeldung
+    - name: 🚦 Startfreigabe
       debug:
         msg:
           - ""
-          - "======================================"
-          - "       🎉 AUTOMATION ERFOLGREICH 🎉"
-          - "======================================"
+          - "=========================================="
+          - "🚦 STARTFREIGABE ERTEILT"
+          - "=========================================="
           - ""
-          - "✅ AWX JOB COMPLETED"
-          - "✅ ANSIBLE READY"
-          - "✅ DEPLOYMENT SUCCESSFUL"
-          - ""
-          - "Die Zukunft ist automatisiert 🚀"
+          - "Präsentation startet in..."
 
 
-    - name: Finale Pause
-      pause:
-        seconds: 15
+    - name: Countdown 5
+      debug:
+        msg: "5..."
+
+    - pause:
+        seconds: 1
+
+    - name: Countdown 4
+      debug:
+        msg: "4..."
+
+    - pause:
+        seconds: 1
+
+    - name: Countdown 3
+      debug:
+        msg: "3..."
+
+    - pause:
+        seconds: 1
+
+    - name: Countdown 2
+      debug:
+        msg: "2..."
+
+    - pause:
+        seconds: 1
+
+    - name: Countdown 1
+      debug:
+        msg: "1..."
+
+    - pause:
+        seconds: 2
 
 
-    - name: 🎓 Präsentation freigeben
+    - name: 🎓 Präsentation gestartet
       debug:
         msg:
-          - "======================================"
-          - "🎓 ABSCHLUSSPRÄSENTATION STARTET"
-          - "======================================"
           - ""
-          - "Vielen Dank für Ihre Aufmerksamkeit! 👏"
+          - "=========================================="
+          - "🎓 ABSCHLUSSPRÄSENTATION GESTARTET"
+          - "=========================================="
+          - ""
+          - "Vielen Dank für Ihre Aufmerksamkeit!"
