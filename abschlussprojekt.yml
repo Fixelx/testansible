@@ -1,64 +1,142 @@
 ---
-- name: 🎓 AWX Abschlusspräsentation - Automation Show
+- name: 🎓 AWX Abschlusspräsentation Automation Show
   hosts: localhost
   connection: local
   gather_facts: yes
 
   tasks:
 
-    - name: 🤖 AWX wird aufgeweckt
+    - name: 🤖 AWX System wird gestartet
       debug:
-        msg: "🤖 Hallo! AWX-Assistent gestartet..."
+        msg:
+          - "======================================"
+          - "🤖 AWX AUTOMATION ASSISTENT"
+          - "======================================"
+          - "Initialisiere Präsentationsmodus..."
+      
 
-    - name: ☕ Kaffee-Check
+    - name: ⏳ Starte Boot-Sequenz
       pause:
-        seconds: 4
+        seconds: 5
 
-    - name: Prüfe Präsentator
-      debug:
-        msg: "👨‍💻 Präsentator erkannt: Bereit zum Vortragen!"
 
-    - name: Lade Motivation
+    - name: 🔌 Verbindung wird geprüft
       debug:
         msg:
-          - "██████████ 100%"
-          - "Motivation geladen ✅"
-          - "Nervosität reduziert... naja, fast 😅"
+          - "🔌 Prüfe Verbindung..."
+          - "✅ Kubernetes erreichbar"
+          - "✅ AWX Operator aktiv"
+          - "✅ Ansible Engine bereit"
 
-    - name: Systemanalyse
-      debug:
-        msg:
-          - "🔍 Suche nach Problemen..."
-          - "❌ Keine Fehler gefunden"
-          - "⚠️ Kaffeevorrat nicht überprüft"
-
-    - name: Zeige Serverdaten
-      debug:
-        msg:
-          - "🖥️ Host: srv129"
-          - "🐧 System: RHEL9"
-          - "🧠 CPU Kerne: 42"
-
-    - name: Simuliere Deployment
-      debug:
-        msg: "🚀 Deployment läuft..."
-
-    - name: Warte Animation
+    - name: ⏳ Verbindungstest läuft
       pause:
-        seconds: 4
+        seconds: 8
 
-    - name: Erfolgreiches Deployment
+
+    - name: ☕ Kaffee-Modul laden
       debug:
         msg:
-          - "████████████████████"
-          - "✅ Projekt erfolgreich deployed"
-          - "✅ AWX funktioniert"
-          - "✅ Ansible macht die Arbeit"
-          - "❌ Menschliche Eingriffe überflüssig (fast)"
-          - "████████████████████"
+          - "☕ Lade Motivation..."
+          - "☕ Prüfe Kaffeestatus..."
+          - "⚠️ Kaffee nicht gefunden"
+          - "➡️ Trotzdem wird fortgesetzt 😄"
 
-    - name: Abschluss
+    - name: Pause für Kaffee
+      pause:
+        seconds: 10
+
+
+    - name: 🧠 Intelligenz-Modul starten
       debug:
         msg:
-          - "🎉 Abschlusspräsentation bereit!"
-          - "👏 Publikum darf jetzt staunen"
+          - "🧠 Analysiere System..."
+          - "🔍 Suche nach Fehlern..."
+          - "🔍 Suche nach vergessenen Passwörtern..."
+          - "🔍 Suche nach Bugs..."
+
+    - name: Denken...
+      pause:
+        seconds: 12
+
+
+    - name: Ergebnis Analyse
+      debug:
+        msg:
+          - "Analyse abgeschlossen:"
+          - ""
+          - "✅ Keine kritischen Fehler gefunden"
+          - "✅ System läuft stabil"
+          - "⚠️ Bediener benötigt noch Kaffee"
+
+
+    - name: 🖥️ Sammle Systeminformationen
+      debug:
+        msg:
+          - "🖥️ Host: {{ ansible_hostname }}"
+          - "🐧 Betriebssystem: {{ ansible_distribution }}"
+          - "⚙️ CPU Kerne: {{ ansible_processor_vcpus }}"
+          - "📡 Automation Engine: Ansible"
+
+    - name: Systemdaten anzeigen
+      pause:
+        seconds: 10
+
+
+    - name: 🚀 Starte Deployment Simulation
+      debug:
+        msg:
+          - "🚀 Starte automatisiertes Deployment..."
+          - ""
+          - "[          ] 0%"
+          - "[██        ] 25%"
+          - "[████      ] 50%"
+          - "[███████   ] 75%"
+          - "[██████████] 100%"
+
+    - name: Deployment läuft
+      pause:
+        seconds: 15
+
+
+    - name: 🎯 Qualitätsprüfung
+      debug:
+        msg:
+          - "Führe Abschlussprüfung durch..."
+          - "✔ Playbook Syntax"
+          - "✔ Verbindung"
+          - "✔ Automation"
+          - "✔ Kaffeeversorgung"
+
+    - name: Prüfung läuft
+      pause:
+        seconds: 12
+
+
+    - name: 🏆 Erfolgsmeldung
+      debug:
+        msg:
+          - ""
+          - "======================================"
+          - "       🎉 AUTOMATION ERFOLGREICH 🎉"
+          - "======================================"
+          - ""
+          - "✅ AWX JOB COMPLETED"
+          - "✅ ANSIBLE READY"
+          - "✅ DEPLOYMENT SUCCESSFUL"
+          - ""
+          - "Die Zukunft ist automatisiert 🚀"
+
+
+    - name: Finale Pause
+      pause:
+        seconds: 15
+
+
+    - name: 🎓 Präsentation freigeben
+      debug:
+        msg:
+          - "======================================"
+          - "🎓 ABSCHLUSSPRÄSENTATION STARTET"
+          - "======================================"
+          - ""
+          - "Vielen Dank für Ihre Aufmerksamkeit! 👏"
