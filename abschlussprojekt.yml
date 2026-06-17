@@ -1,7 +1,64 @@
 ---
-- hosts: all
-  gather_facts: false
+- name: 🎓 AWX Abschlusspräsentation - Automation Show
+  hosts: localhost
+  connection: local
+  gather_facts: yes
 
   tasks:
-    - debug:
-        msg: "Hallo von AWX"
+
+    - name: 🤖 AWX wird aufgeweckt
+      debug:
+        msg: "🤖 Hallo! AWX-Assistent gestartet..."
+
+    - name: ☕ Kaffee-Check
+      pause:
+        seconds: 4
+
+    - name: Prüfe Präsentator
+      debug:
+        msg: "👨‍💻 Präsentator erkannt: Bereit zum Vortragen!"
+
+    - name: Lade Motivation
+      debug:
+        msg:
+          - "██████████ 100%"
+          - "Motivation geladen ✅"
+          - "Nervosität reduziert... naja, fast 😅"
+
+    - name: Systemanalyse
+      debug:
+        msg:
+          - "🔍 Suche nach Problemen..."
+          - "❌ Keine Fehler gefunden"
+          - "⚠️ Kaffeevorrat nicht überprüft"
+
+    - name: Zeige Serverdaten
+      debug:
+        msg:
+          - "🖥️ Host: srv129"
+          - "🐧 System: RHEL9"
+          - "🧠 CPU Kerne: 42"
+
+    - name: Simuliere Deployment
+      debug:
+        msg: "🚀 Deployment läuft..."
+
+    - name: Warte Animation
+      pause:
+        seconds: 4
+
+    - name: Erfolgreiches Deployment
+      debug:
+        msg:
+          - "████████████████████"
+          - "✅ Projekt erfolgreich deployed"
+          - "✅ AWX funktioniert"
+          - "✅ Ansible macht die Arbeit"
+          - "❌ Menschliche Eingriffe überflüssig (fast)"
+          - "████████████████████"
+
+    - name: Abschluss
+      debug:
+        msg:
+          - "🎉 Abschlusspräsentation bereit!"
+          - "👏 Publikum darf jetzt staunen"
