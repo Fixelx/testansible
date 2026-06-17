@@ -18,7 +18,7 @@
           
     - name: ⏳ Initialisierung
       pause:
-        seconds: 2
+        seconds: 4
 
 
     - name: 🔌 Verbindungstest
@@ -30,7 +30,7 @@
 
     - name: Warten
       pause:
-        seconds: 2
+        seconds: 4
 
 
     - name: 📂 Präsentationsdateien prüfen
@@ -43,7 +43,7 @@
 
     - name: Folien laden
       pause:
-        seconds: 2
+        seconds: 4
 
 
     - name: 🎤 Sprecher-Modul aktivieren
@@ -57,7 +57,7 @@
 
     - name: Nervosität behandeln
       pause:
-        seconds: 4
+        seconds: 6
 
 
     - name: ☕ Notfallprüfung
